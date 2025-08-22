@@ -1,0 +1,30 @@
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+thead {
+    background: #c6b48c;
+    color: white;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tbody tr:hover {
+    background: #faf6ed;
+}
+tbody tr {
+    cursor: pointer;
+}
