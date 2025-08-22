@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useParams, useNavigate } from "
 import "./App.css";
 import BookList from "./Books/BookList";
 import BookDetails from "./Books/BookDetails";
+import Head from "./Head";
 
 const Books = [
   {
@@ -41,7 +42,7 @@ function BookDetailsPage() {
 function App() {
   return (
     <Router>
-      <h1>List of e-books</h1>
+      <Head/>
       <Routes>
         <Route path="" element={<BookList books={Books} />} />
         <Route path="book/:id" element={<BookDetailsPage />} />
