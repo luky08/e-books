@@ -1,0 +1,76 @@
+/* Výchozí zobrazení */
+.print-only { display: none; }
+.no-print { display: initial; }
+
+/* Tisková verze stránky */
+@media print {
+  /* Nastavení okrajů stránky */
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  /* Základní kontrast a čitelnost */
+  body {
+    color: #000 !important;
+    background: #fff !important;
+    font: 12pt/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  /* Schování prvků, které nechceme tisknout */
+  .no-print,
+  .back-btn,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  /* Zobrazení tisk-only prvků */
+  .print-only { display: block !important; }
+
+  .print-only.head-print {
+    width: 100%;
+  }
+
+  /* Tabulka – ostré rámečky a hezké zalomení */
+  .book-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: fixed;
+    page-break-inside: auto;
+  }
+  thead {
+    background: #c6b48c;
+    color: white;
+}
+
+  .book-table th,
+  .book-table td {
+    border: 1pt solid #000 !important;
+    padding: 6pt 8pt !important;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+
+  .book-table thead { display: table-header-group; } /* hlavička se opakuje na každé stránce */
+  .book-table tr { page-break-inside: avoid; }
+  
+  /* Zrušení hover efektů a kurzoru */
+  .book-row,
+  .book-row:hover {
+    background: transparent !important;
+    cursor: default !important;
+  }
+
+  /* Odstranění rušivých okrajů */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Volitelně: zkrácení odkazů s URL za textem (pokud by v budoucnu byly) */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-weight: normal;
+  }
+}

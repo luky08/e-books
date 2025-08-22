@@ -1,6 +1,6 @@
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 5px auto;
     border-collapse: collapse;
     background: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -27,4 +27,26 @@ tbody tr:hover {
 }
 tbody tr {
     cursor: pointer;
+}
+
+.book-list-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.print-btn {
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #886d3f;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background: #705934;
 }
