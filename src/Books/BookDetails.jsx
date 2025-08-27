@@ -30,14 +30,16 @@ export default function BookDetails() {
 
       if (!book) { return "Book not found"}
 
+      console.log(book)
+
   return (
     <div className="book-detail">
       <div className="book-content">
         <div className="book-cover">
-          {/*<img
-            src={book.cover ? `/assets/${book.cover}` : `/assets/placeholder.jpg`}
+          <img
+            src={`/assets/${book.cover}`}
             alt={`Obálka knihy ${book.title}`}
-          />*/}
+          />
         </div>
 
         <div className="book-info">
