@@ -1,12 +1,32 @@
-# React + Vite
+# Library Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple library application built with **React** that connects to an **API** to display books.  
+Users can browse a list of books and view detailed information about a selected book.
 
-Currently, two official plugins are available:
+The application currently uses my local API, so everyone must set up and connect their own API for the application to work properly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Display a list of available books
+- View book details by ID from URL
+- Print a list of books
+
+---
+
+## Technologies
+
+- React
+
+---
+
+## ⚙️ Installation & Running
+
+1.  Clone the repository
+
+2.  cd e-books
+
+3.  npm install
+
+4.  npm run dev
