@@ -1,8 +1,16 @@
 import "./BookList.css";
 import "./BookListPrint.css"
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiGet } from "../utils/api";
 
-export default function BookList({ books, onSelect }) {
+export default function BookList() {
+
+    const [bookState, setBooks] = useState([]);
+
+    useEffect(() => {
+        apiGet("/api/book").then((data) => setBooks(data.data));
+    }, []);
 
     const handlePrint = () => {
         window.print();
@@ -32,18 +40,18 @@ export default function BookList({ books, onSelect }) {
                 </tr>
             </thead>
             <tbody>
-                {books.map((b) => (
+                {bookState.map((b) => (
                 <tr
-                    key={b.id}
+                    key={b.book_id}
                     className="book-row"
-                    onClick={() => navigate(`/book/${b.id}`)}
+                    onClick={() => navigate(`/book/${b.book_id}`)}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && navigate(`/${b.id}`)}
+                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && navigate(`/${b.book_id}`)}
                 >
                     <td>{b.title}</td>
-                    <td>{b.author}</td>
-                    <td>{b.year}</td>
+                    <td>{b.author_name}</td>
+                    <td>{b.publication_year}</td>
                 </tr>
                 ))}
             </tbody>
