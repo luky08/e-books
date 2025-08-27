@@ -19,13 +19,11 @@
 
   /* Schování prvků, které nechceme tisknout */
   .no-print,
-  .back-btn,
   nav,
   footer {
     display: none !important;
   }
 
-  /* Zobrazení tisk-only prvků */
   .print-only { display: block !important; }
 
   .print-only.head-print {
@@ -68,9 +66,5 @@
     text-shadow: none !important;
   }
 
-  /* Volitelně: zkrácení odkazů s URL za textem (pokud by v budoucnu byly) */
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-weight: normal;
-  }
+ 
 }

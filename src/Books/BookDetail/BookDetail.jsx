@@ -1,6 +1,6 @@
-import './BookDetails.css';
+import './BookDetail.css';
 import { useNavigate } from 'react-router-dom';
-import { apiGet } from "../utils/api";
+import { apiGet } from "../../utils/api";
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -30,7 +30,6 @@ export default function BookDetails() {
 
       if (!book) { return "Book not found"}
 
-      console.log(book)
 
   return (
     <div className="book-detail">

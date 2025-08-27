@@ -1,8 +1,8 @@
 import "./BookList.css";
-import "./BookListPrint.css"
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { apiGet } from "../utils/api";
+import { apiGet } from "../../utils/api";
+import BookListPrint from "./BookListPrint";
 
 export default function BookList() {
 
@@ -23,13 +23,7 @@ export default function BookList() {
             <button onClick={handlePrint} className="print-btn">Print list</button>
         </div>
 
-        <header className="print-only head-print">
-            <h1>List of e-books</h1>
-            <small>
-            Printed: {new Date().toLocaleString()}
-            </small>
-            <hr />
-        </header>
+        <BookListPrint/>
         
         <table className="book-table" border="1">
             <thead>
