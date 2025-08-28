@@ -23,7 +23,7 @@ The application currently uses my local API, so everyone must set up and connect
 
 ## ⚙️ Installation & Running
 
-1.  git clone <this-repo>
+1.  git clone < this-repo >
 
 2.  cd e-books
 
